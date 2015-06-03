@@ -23,3 +23,18 @@
     </TABLE>
   </TABLES>
 </XMLDB>
+
+<!--
+    This file is part of Moodle - http://moodle.org/
+    
+    Released under GNU General Public License version three (3), for further details,
+    review the web page "https://www.gnu.org/licenses/gpl.html" or "license.txt".
+	
+	A tool for Date rollover and a tool for Individual date adjustment. Jesus lives!
+	
+	@package    local
+	@subpackage dateadjustmenttools
+	@copyright  2011 Juan Leyva      <juanleyvadelgado@gmail.com>
+	@copyright  2015 Anton Thelander <anton.thelander@outlook.com>
+	@license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+-->
