@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/dateadjustmenttools/db" VERSION="20150523" COMMENT="XMLDB file for Moodle local/dateadjustmenttools."
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="local_dateadjustmenttools" COMMENT="Settings for expanded or collapsed headers and for which tool that was latest used.">
+      <FIELDS>
+        <FIELD NAME="id"                          TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="true"                                        NEXT="userid"/>
+        <FIELD NAME="userid"                      TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" PREVIOUS="id"                         NEXT="dateoverviewheaderexp"/>
+        <FIELD NAME="dateoverviewheaderexp"       TYPE="int" LENGTH="1"  NOTNULL="true" SEQUENCE="false" PREVIOUS="userid"                     NEXT="selecttoolheaderexp"        DEFAULT="1"/>
+        <FIELD NAME="selecttoolheaderexp"         TYPE="int" LENGTH="1"  NOTNULL="true" SEQUENCE="false" PREVIOUS="dateoverviewheaderexp"      NEXT="selecttool"                 DEFAULT="1"/>
+        <FIELD NAME="selecttool"                  TYPE="int" LENGTH="1"  NOTNULL="true" SEQUENCE="false" PREVIOUS="selecttoolheaderexp"        NEXT="daterolloverheaderexp"      DEFAULT="0"/>
+        <FIELD NAME="daterolloverheaderexp"       TYPE="int" LENGTH="1"  NOTNULL="true" SEQUENCE="false" PREVIOUS="selecttool"                 NEXT="individualdateadjheaderexp" DEFAULT="1"/>
+        <FIELD NAME="individualdateadjheaderexp"  TYPE="int" LENGTH="1"  NOTNULL="true" SEQUENCE="false" PREVIOUS="daterolloverheaderexp"      NEXT="settingsheaderexp"          DEFAULT="1"/>
+        <FIELD NAME="settingsheaderexp"           TYPE="int" LENGTH="1"  NOTNULL="true" SEQUENCE="false" PREVIOUS="individualdateadjheaderexp" NEXT="timecreated"                DEFAULT="1"/>
+        <FIELD NAME="timecreated"                 TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" PREVIOUS="settingsheaderexp"          NEXT="timemodified"/>
+        <FIELD NAME="timemodified"                TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false" PREVIOUS="timecreated"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
