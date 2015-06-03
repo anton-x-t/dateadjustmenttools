@@ -1,6 +1,6 @@
 Guide for installing the Moodle plugin "Date adjustment tools"
 
-Prerequisites: a Moodle distribution on any AMP(P) server and adminstrative priviligies for that server and Moodle distribution.
+Prerequisites: a Moodle distribution on any AMP(P) server and adminstrative priviligies for that server and that Moodle distribution.
 
 1. Browse to <https://github.com/discipletojesus316/dateadjustmenttools>.
 
